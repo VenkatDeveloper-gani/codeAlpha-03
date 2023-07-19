@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Custom CSS -->
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form id="resume-form">
+            <!-- Personal Information Section -->
+            <div class="resume-section">
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" class="form-control" id="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="resume-section">
+                <h3>Education</h3>
+                <div class="form-group">
+                    <label for="university">University</label>
+                    <input type="text" class="form-control" id="university" required>
+                </div>
+                <div class="form-group">
+                    <label for="degree">Degree</label>
+                    <input type="text" class="form-control" id="degree" required>
+                </div>
+                <div class="form-group">
+                    <label for="graduation-year">Graduation Year</label>
+                    <input type="number" class="form-control" id="graduation-year" required>
+                </div>
+            </div>
+
+            <!-- Work Experience Section -->
+            <div class="resume-section">
+                <h3>Work Experience</h3>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" class="form-control" id="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position</label>
+                    <input type="text" class="form-control" id="position" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration</label>
+                    <input type="text" class="form-control" id="duration" required>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="resume-section">
+                <h3>Skills</h3>
+                <div class="form-group">
+                    <label for="skills">List your skills (comma-separated)</label>
+                    <input type="text" class="form-control" id="skills" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-generate">Generate Resume</button>
+        </form>
+
+        <div id="resume" class="d-none">
+            <h2>Resume</h2>
+            <hr>
+            <h3>Personal Information</h3>
+            <p id="resume-full-name"></p>
+            <p id="resume-email"></p>
+            <p id="resume-phone"></p>
+            <h3>Education</h3>
+            <p id="resume-university"></p>
+            <p id="resume-degree"></p>
+            <p id="resume-graduation-year"></p>
+            <h3>Work Experience</h3>
+            <p id="resume-company"></p>
+            <p id="resume-position"></p>
+            <p id="resume-duration"></p>
+            <h3>Skills</h3>
+            <p id="resume-skills"></p>
+        </div>
+
+        <div id="alert-success" class="alert alert-success d-none">Resume generated successfully!</div>
+        <div id="alert-danger" class="alert alert-danger d-none">Please fill out all the required fields.</div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Custom JS -->
+</body>
+
+</html>
